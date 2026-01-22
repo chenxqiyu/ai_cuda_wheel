@@ -10,7 +10,7 @@
 - ✅ **CUDA 13.0**
 - ✅ **PyTorch 2.9.1（cu130）**
 - ✅ **xFormers（Blackwell 分支）**
-- ✅ **SageAttention / SageAttention3**
+- ✅ **SageAttention2 / SageAttention3**
 - ✅ **Triton（Windows 版）**
 - ✅ **Nunchaku INT4 推理引擎**
 - ✅ **ComfyUI 工作流友好**
