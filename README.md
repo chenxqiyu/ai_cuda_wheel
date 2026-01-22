@@ -1,41 +1,121 @@
+# 🚀 RTX 50 系列显卡 AI 加速环境（Windows）
 
-# 🚀 RTX 50 系列显卡 AI 加速环境
+> **适用场景**：ComfyUI + Nunchaku + KJNodes  
+> **目标**：在 RTX 50 系列显卡上，构建稳定、高性能的 AI 推理与加速环境  
 
-> 适用于 Windows 平台 + ComfyUI + Nunchaku + KJNodes  
-> 支持 CUDA 13.0、PyTorch 2.9.1、xFormers、SageAttention、Triton 及 Nunchaku INT4 推理引擎
+---
+
+## ✨ 环境特性
+
+- ✅ **CUDA 13.0**
+- ✅ **PyTorch 2.9.1（cu130）**
+- ✅ **xFormers（Blackwell 分支）**
+- ✅ **SageAttention / SageAttention3**
+- ✅ **Triton（Windows 版）**
+- ✅ **Nunchaku INT4 推理引擎**
+- ✅ **ComfyUI 工作流友好**
+
+---
+
+## 🧩 基础环境
+
+- **操作系统**：Windows 10 / 11 x64  
+- **Python**：3.11（推荐）  
+- **Visual Studio**：VS 2022（含 C++ Build Tools）  
+- **显卡**：RTX 50 系列  
+
+---
+
+## 📦 PyTorch（CUDA 13.0）
+
+```bash
+pip install --pre torch==2.9.1+cu130 torchvision==0.24.1+cu130 torchaudio==2.9.1+cu130   --index-url https://download.pytorch.org/whl/cu130
 ```
-pip install --pre torch==2.9.1+cu130 torchvision==0.24.1+cu130 torchaudio==2.9.1+cu130 --index-url https://download.pytorch.org/whl/cu130
-```
-```
+
+---
+
+## ⚡ 加速组件安装
+
+### xFormers
+```bash
 pip install xformers-0.0.33+5d4b92a.d20260121-cp39-abi3-win_amd64.whl
 ```
-```
+
+### Triton（Windows）
+```bash
 pip install triton_windows-3.6.0-cp311-cp311-win_amd64.whl
 ```
-```
+
+### SageAttention
+```bash
 pip install sageattention-2.2.0-cp311-cp311-win_amd64.whl
 ```
-```
+
+### SageAttention3
+```bash
 pip install sageattn3-1.0.0-cp311-cp311-win_amd64.whl
 ```
-```
+
+### Nunchaku
+```bash
 pip install nunchaku-1.2.0+torch2.9-cp311-cp311-win_amd64.whl
 ```
-```
-https://github.com/nunchaku-ai/ComfyUI-nunchaku
-https://github.com/kijai/ComfyUI-KJNodes
-https://github.com/wallen0322/ComfyUI-SageAttention3
-```
 
-```
-编译记录
+---
 
-x64 Native Tools Command Prompt for VS 2022
+## 🧠 ComfyUI 扩展节点
 
-git修复和长路径支持
+- **Nunchaku**
+  - https://github.com/nunchaku-ai/ComfyUI-nunchaku
+
+- **KJNodes**
+  - https://github.com/kijai/ComfyUI-KJNodes
+
+- **SageAttention3**
+  - https://github.com/wallen0322/ComfyUI-SageAttention3
+
+---
+
+## 🛠️ 编译与构建记录
+
+### 编译环境
+- **工具**：x64 Native Tools Command Prompt for VS 2022
+
+### Git 长路径支持（必做）
+```bash
 git config --system core.longpaths true
-https://github.com/woct0rdho/triton-windows
-https://github.com/mengqin/SageAttention
-https://github.com/LagPixelLOL/xformers/tree/blackwell
-https://github.com/nunchaku-ai/nunchaku
 ```
+
+### 相关源码仓库
+
+- Triton Windows 适配  
+  https://github.com/woct0rdho/triton-windows
+
+- SageAttention  
+  https://github.com/mengqin/SageAttention
+
+- xFormers（Blackwell）  
+  https://github.com/LagPixelLOL/xformers/tree/blackwell
+
+- Nunchaku Core  
+  https://github.com/nunchaku-ai/nunchaku
+
+---
+
+## 🧪 实践建议
+
+- 🔹 优先验证 `torch.cuda.is_available()` 与 CUDA 版本一致性  
+- 🔹 遇到 `misaligned address`，优先检查 attention kernel / dtype / head_dim  
+- 🔹 SageAttention3 与 xFormers 不建议同时启用同一路径  
+- 🔹 INT4 推理建议搭配 **Nunchaku + FP16 输入**
+
+---
+
+## 📌 备注
+
+本环境主要面向 **RTX 50（Blackwell）** 架构实验与高性能推理，  
+部分组件为 **非官方 / 实验性构建**，请自行评估稳定性。
+
+---
+
+**Enjoy Blackwell 🚀**
