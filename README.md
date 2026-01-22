@@ -117,5 +117,8 @@ git config --system core.longpaths true
 部分组件为 **非官方 / 实验性构建**，请自行评估稳定性。
 
 ---
+## 使用sageattention3加速选其中一个就行
+<img width="684" height="402" alt="image" src="https://github.com/user-attachments/assets/a6909182-577e-4dfe-b3ae-be55e607185f" />
+<img width="482" height="247" alt="image" src="https://github.com/user-attachments/assets/a2348277-2062-4732-af8c-9ba25a906ee2" />
 
 **Enjoy Blackwell 🚀**
