@@ -121,5 +121,6 @@ git config --system core.longpaths true
 ## 使用sageattention3加速选其中一个就行
 <img width="684" height="402" alt="image" src="https://github.com/user-attachments/assets/a6909182-577e-4dfe-b3ae-be55e607185f" />
 <img width="482" height="247" alt="image" src="https://github.com/user-attachments/assets/a2348277-2062-4732-af8c-9ba25a906ee2" />
+<img width="718" height="782" alt="image" src="https://github.com/user-attachments/assets/e3befb15-3e58-4c7d-ac47-ad3b276908ac" />
 
 **Enjoy Blackwell 🚀**
