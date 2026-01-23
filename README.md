@@ -1,3 +1,8 @@
+<p align="center">
+Welcome, the
+<a href="https://github.com/XiaoYouChR" target="_blank"><img src="https://count.getloli.com/get/@ai_cuda_wheel?theme=rule34" alt="Visitor Counter"></a>
+th vistor!
+</p>
 # 🚀 RTX 50 系列显卡 AI 加速环境（Windows）
 
 > **适用场景**：ComfyUI + Nunchaku + KJNodes  
